@@ -1,16 +1,25 @@
 #!/usr/bin/env python
 
-# TODO: write me!
-def sum_fibonacci(n):
-	'''gives the sum of the first n numbers in the fibonacci sequence'''
-	pass
+def sum_fib(n):
+    a = 0
+    b = 1
+    counter = 0
+    fib_list = []
+    while counter < n:
+        a, b, = b, a + b
+        fib_list.append(a)
+        counter += 1
+    print fib_list
+    return sum(fib_list)
+
+sum_fib(10)
 
 # NOTE: this is an encoded solution
 #       the programme will decode it automatically
 #         so you can check your results against it yourself
 #       it will create a function called `solution'
 solution = None
-exec '''sebz vgregbbyf vzcbeg vfyvpr
+exec''' sebz vgregbbyf vzcbeg vfyvpr
 qrs svobanppv(n=1, o=1):
 	juvyr Gehr:
 		lvryq n
