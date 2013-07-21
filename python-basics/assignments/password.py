@@ -4,6 +4,7 @@
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 from random import randint, choice, shuffle
 
+all_chars = ascii_lowercase + ascii_uppercase + digits + punctuation
 # NOTE: examples of use
 # ascii_lowercase, ascii_uppercase, digits, punctuation are 
 #   lists of ASCII characters
@@ -19,27 +20,13 @@ assert choice(ascii_lowercase) in 'abcdefghijklmnopqrstuvwxyz'
 
 # TODO: write me!
 def new_password():
-	''' gives a new password that satisfies the requirements
-	
-	requirements:
-	1. must be random
-	2. must be 8-characters long
-	3. must have at least one digit, at least one punctuation, at least one
-	   lowercase, AND at least one uppercase letter
-	'''
-	pass
+    new_pass = [choice(punctuation),choice(ascii_lowercase),choice(ascii_uppercase),choice(all_chars),choice(all_chars),choice(digits),choice(all_chars),choice(all_chars)]
+    new_pass = "".join(new_pass)
+    return new_pass
 
 # TODO: it might be helpful to write this, too
 def valid_password(password):
-	''' determines if a password meets the requirements
-
-	requirements:
-	(1. must be random -- too difficult to check here)
-	2. must be 8-characters long
-	3. must have at least one digit, at least one punctuation, at least one
-	   lowercase, AND at least one uppercase letter
-	'''
-	return True
+    return len(password) == 8 and set(password) & set(ascii_lowercase) and set(password) & set(ascii_uppercase) and set(password) & set(digits) and set(password) & set(punctuation)
 
 # NOTE: this is an encoded solution
 #       the programme will decode it automatically
