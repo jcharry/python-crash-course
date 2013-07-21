@@ -2,9 +2,15 @@
 
 # TODO: write me!
 def sum_divisible(n):
-	''' gives the sum of all the numbers up to but not including n
-	    that are divisible by 3 or by 5 '''
-	pass
+    ''' gives the sum of all the numbers up to but not including n
+    that are divisible by 3 or by 5 '''
+    i = 0
+    total = 0
+    while i < n:
+        if i % 3 == 0 or i % 5 == 0:
+            total += i
+        i += 1
+    return total
 
 # NOTE: this is an encoded solution
 #       the programme will decode it automatically
