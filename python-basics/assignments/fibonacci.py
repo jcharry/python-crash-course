@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 
 def sum_fibonacci(n):
-    a = 0
-    b = 1
-    counter = 0
-    fib_list = []
     while counter < n:
         a, b, = b, a + b
         fib_list.append(a)
